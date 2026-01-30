@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+/* Custom base styles */
+@layer base {
+	/* Ensure full height for background propagation */
+	html,
+	body {
+		@apply h-full;
+	}
+
+	body {
+		@apply font-sans antialiased;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-serif font-bold;
+	}
+}
+
+/* Global utility for prose dark mode */
+.prose {
+	@apply max-w-none transition-colors duration-300 dark:prose-invert;
+}
