@@ -1,0 +1,1 @@
+import{ac as u,O as o,aY as _,T as a,aj as g,aw as i,a8 as l,a7 as d,ae as p,ai as m}from"./D1-jrELl.js";function E(n,r){let t=null,f=a;var s;if(a){t=p;for(var e=m(document.head);e!==null&&(e.nodeType!==g||e.data!==n);)e=i(e);if(e===null)l(!1);else{var y=i(e);e.remove(),d(y)}}a||(s=document.head.appendChild(u()));try{o(()=>r(s),_)}finally{f&&(l(!0),d(t))}}export{E as h};

@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "routes": [
+    {
+      "src": "/blog/",
+      "dest": "/blog"
+    },
+    {
+      "src": "/blog",
+      "status": 308,
+      "headers": {
+        "Location": "/blog/"
+      }
+    },
+    {
+      "src": "/cv/",
+      "dest": "/cv"
+    },
+    {
+      "src": "/cv",
+      "status": 308,
+      "headers": {
+        "Location": "/cv/"
+      }
+    },
+    {
+      "src": "/publications/",
+      "dest": "/publications"
+    },
+    {
+      "src": "/publications",
+      "status": 308,
+      "headers": {
+        "Location": "/publications/"
+      }
+    },
+    {
+      "src": "/research/",
+      "dest": "/research"
+    },
+    {
+      "src": "/research",
+      "status": 308,
+      "headers": {
+        "Location": "/research/"
+      }
+    },
+    {
+      "src": "/talks/",
+      "dest": "/talks"
+    },
+    {
+      "src": "/talks",
+      "status": 308,
+      "headers": {
+        "Location": "/talks/"
+      }
+    },
+    {
+      "src": "/teaching/",
+      "dest": "/teaching"
+    },
+    {
+      "src": "/teaching",
+      "status": 308,
+      "headers": {
+        "Location": "/teaching/"
+      }
+    },
+    {
+      "src": "/blog/welcome/",
+      "dest": "/blog/welcome"
+    },
+    {
+      "src": "/blog/welcome",
+      "status": 308,
+      "headers": {
+        "Location": "/blog/welcome/"
+      }
+    },
+    {
+      "src": "/_app/immutable/.+",
+      "headers": {
+        "cache-control": "public, immutable, max-age=31536000"
+      }
+    },
+    {
+      "handle": "error"
+    },
+    {
+      "status": 404,
+      "src": "^(?!/api).*$",
+      "dest": "/404.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/![-]/catchall"
+    }
+  ],
+  "overrides": {
+    "index.html": {
+      "path": ""
+    },
+    "blog/index.html": {
+      "path": "blog"
+    },
+    "cv/index.html": {
+      "path": "cv"
+    },
+    "publications/index.html": {
+      "path": "publications"
+    },
+    "research/index.html": {
+      "path": "research"
+    },
+    "talks/index.html": {
+      "path": "talks"
+    },
+    "teaching/index.html": {
+      "path": "teaching"
+    },
+    "blog/welcome/index.html": {
+      "path": "blog/welcome"
+    }
+  },
+  "crons": []
+}
