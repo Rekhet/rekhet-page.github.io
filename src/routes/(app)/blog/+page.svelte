@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	let { data } = $props();
 </script>
 
@@ -26,7 +27,7 @@
 				<h2
 					class="text-2xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
 				>
-					<a href="/blog/{post.slug}">{post.title}</a>
+					<a href="{base}/blog/{post.slug}">{post.title}</a>
 				</h2>
 				<p class="text-slate-600 dark:text-slate-300">
 					{post.description}

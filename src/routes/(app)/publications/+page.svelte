@@ -1,4 +1,5 @@
 <script lang="ts">
+	//	import { base } from '$app/paths';
 	interface Publication {
 		title: string;
 		authors: string[];

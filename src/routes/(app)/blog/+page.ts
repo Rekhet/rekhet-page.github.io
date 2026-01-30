@@ -10,17 +10,11 @@ export const load: PageLoad = async () => {
 			return {
 				slug,
 				...metadata
-			};
+			} as { slug: string; title: string; date: string; description: string; tags: string[] };
 		})
-		.sort((a, b) => new Date(b.date as string).getTime() - new Date(a.date as string).getTime());
+		.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 	return {
-		posts: posts as Array<{
-			slug: string;
-			title: string;
-			date: string;
-			description: string;
-			tags: string[];
-		}>
+		posts
 	};
 };

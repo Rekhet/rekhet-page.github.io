@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	// Page specific logic if any
 </script>
 
@@ -64,7 +65,7 @@
 				<div>
 					<p class="text-slate-800 dark:text-slate-200">
 						[News item description with optional <a
-							href="/"
+							href="{base}/"
 							class="text-blue-600 dark:text-blue-400 hover:underline">links</a
 						>.]
 					</p>

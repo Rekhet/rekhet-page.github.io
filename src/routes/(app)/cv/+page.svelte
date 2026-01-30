@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <svelte:head>
 	<title>CV - [Your Name]</title>
 </svelte:head>
@@ -14,7 +18,7 @@
 		<p>
 			<!-- Link to your actual PDF CV file in the static folder -->
 			<a
-				href="/cv.pdf"
+				href="{base}/cv.pdf"
 				class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-slate-800 hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500"
 			>
 				<svg class="mr-2 -ml-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

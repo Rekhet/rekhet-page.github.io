@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <svelte:head>
 	<title>Teaching - [Your Name]</title>
 </svelte:head>
@@ -23,7 +27,7 @@
 					[Brief description of the course content.]
 				</p>
 				<a
-					href="/"
+					href="{base}/"
 					class="inline-block mt-2 text-blue-600 dark:text-blue-400 hover:underline text-sm"
 					>Course Website &rarr;</a
 				>

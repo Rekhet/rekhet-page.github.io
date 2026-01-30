@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../../app.css';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import { base } from '$app/paths';
+
 	let { children } = $props();
 
 	const navLinks = [
@@ -23,7 +25,7 @@
 		<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 			<div class="flex items-center">
 				<a
-					href="/"
+					href="{base}/"
 					class="text-xl font-bold font-serif tracking-tight text-slate-900 dark:text-white"
 					>[Your Name]</a
 				>
@@ -33,7 +35,7 @@
 					{#each navLinks as link (link.name)}
 						<li>
 							<a
-								href={link.href}
+								href="{base}{link.href}"
 								class="text-sm font-medium text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
 							>
 								{link.name}
